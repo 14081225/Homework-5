@@ -117,18 +117,6 @@ var Pole = (function (_super) {
                 timer.stop();
             }
         }
-        /* 帧动画一代目
-        PlayAni1();
-        var timer:egret.Timernew egret.Timer(100, time);
-            egret.Tween.get(Bit).wait(150).call(PlayAni2);
-        }
-        function PlayAni2(){
-            Bit.texture=Ani[count];
-            if(count<Ani.length-1){console.log(Ani.length+" "+count); count++;}
-            else{count=0;}
-            PlayAni1();
-       }
-       */
     };
     p.Move = function (x, y) {
         var MS = new MoveSta(x, y, this);
@@ -185,7 +173,7 @@ var MoveSta = (function () {
                 //         console.log("1");
                 if (_this.LeastTime > -10) {
                     _this.Player.Idle();
-                } //意味着是走停不是逼停
+                }
             }
         }, this);
         this.timer.start();
